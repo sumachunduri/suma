@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+header {
+  background-color: SlateBlue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+
+</style>
+</head>
+<body>
+<form name="form1" >
+<header>
+
+<img src="C:\Users\kchundur\Desktop\concordia.jpg"  style="float:left;width:100px;height:70px;">
+<img src="C:\Users\kchundur\Desktop\GSA.jfif" style="float:right;width:100px;height:70px;"><br>
+</header>
+<br><br>
+
+<h2 align="center" style="background-color:DodgerBlue;">Registration Form</h2>
+<fieldset style="background-color:LightBlue;">
+	<legend>Personal Info:</legend>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname"><br><br>
+  Gender:<br>
+  <input type="radio" name="gen" value="Male">Male <input type="radio" name="gen" value="Female">Female <input type="radio" name="gen" value="Other">Other<br>
+  Date Of Birth:<br>
+  <input type="date" name="date" placeholder="mm/dd/yyyy"><br>
+  Enter Your E-mail:<br>
+  <input type="text" name="email"><br>
+  Telephone Number:<br>
+   <input type="tel" name="phone"><br>
+   Please select best time to call:<br>
+   <input type="time" name="time"><br><br>
+   write about yourself:<br>
+   Note:Kindly write how you relate to events by GSA<br>
+   <textarea rows="4" cols="50">
+   </textarea><br><br>
+   
+   Kindly specify the activities pertaining to GSA you interested in:<br>
+   <input type="text" name="activities" placeholder="activities"><br><br>
+   
+   Upload Your Resume<br>
+   <input type="file" id="myFile">
+<br><br>
+   
+Note:Please chose a valid username and strong password:<br>
+   
+   Username:<br>
+  <input type="text" name="username"><br>
+   Password(Min 10 Letters):<br>
+  <input type="text" name="password"><br>
+  
+  <input type="checkbox" name="yes" value="agree">I provide consent to the information collection process<br>
+  <input type="checkbox" name="no" value="disagree">I disagree to provide consent to the information collection process<br><br>
+  <button type="submit" onclick="myFunction()"> Finish </button> ​ 
+ <script> function myFunction() { alert("Your results are recorded!"); } </script>
+  <button type="submit" onclick="myFunction()">Cancel</button>
+  <script> function myFunction() { alert("Your results are recorded!"); } </script>
+<fieldset>
+  </form>
+  </body>
+  </html>
