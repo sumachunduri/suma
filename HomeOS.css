@@ -1,0 +1,31 @@
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin:30px 0px 40px 30px;
+}
+h1 {
+  color: Red;
+  text-align:left;
+  height:70px;
+}
+h3 {
+  color: Red;
+  text-align: left;
+}
+h4 {
+  color: green;
+  text-align: left;
+}
+body {
+	 background-color:lightblue;
+
+}
+

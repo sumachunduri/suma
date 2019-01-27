@@ -1,41 +1,16 @@
 <html>
 <head>
 <title>ONLINE SHOPPING</title>
-<style>
-h1 {
-  color: Red;
-  text-align: center;
-  background-color:black;
-  height:70px;
-}
-h3 {
-  color: Red;
-  text-align: left;
-  
-}
-body {
-	 background-color:lightblue;
-}
-
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   text-align: center;
-}
-
-</style>
-<h1 align="center"><b>WELCOME TO ONLINE SHOPPING</b></h1>
+<link rel="stylesheet" href="HomeOS.css">
+<img src="banner.jpg" style="align:center; border: 2px solid black; width :1250px;
 </head>
 <body>
-<h3 align="left"> MENU </h3><br>
- <h4>IPHONE 7</h4>
+<form action="/cart.php" method="get">
+<h1><b>MENU</b></h1>
+ <h2>IPHONE 7</h2>
 <table>
  <tr>
-    <th rowspan="3"><img src="C:\Users\kchundur\Desktop\iphone7.png" width="50px" height="50px"></th>
+    <th rowspan="3"><img src="iphone 7.jpg" width="50px" height="50px"></th>
     <td>Brand: Apple</td>
   </tr>
   <tr>
@@ -44,18 +19,18 @@ body {
   <tr>
     <td>Screen size:6.5 inches screen</td>
 </table>
-<button value="ADD TO CART" onclick="/cart.html">ADD TO CART</button>
-<select id="phonecount">
+<button value="ADD TO CART">ADD TO CART</button>
+<select name="phonecount">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
 </select>
 
-<h4>LAPTOP</h4>
+<h3>LAPTOP</h3>
 <table>
  <tr>
-    <th rowspan="3"><img src="C:\Users\kchundur\Desktop\Laptop.jfif" width="50px" height="50px"></th>
+    <th rowspan="3"><img src="dell.jpg" width="50px" height="50px"></th>
     <td>Brand: Dell</td>
   </tr>
   <tr>
@@ -64,8 +39,8 @@ body {
   <tr>
     <td>Screen size:13.5 inches screen</td>
 </table>
-<button value="ADD TO CART" onclick="/cart.html">ADD TO CART</button>
-<select id="phonecount">
+<button value="ADD TO CART" >ADD TO CART</button>
+<select id="lapcount">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -75,25 +50,26 @@ body {
 <h4>CAMERA</h4>
 <table>
  <tr>
-    <th rowspan="3"><img src="C:\Users\kchundur\Desktop\tv.jfif" width="50px" height="50px"></th>
+    <th rowspan="3"><img src="sony.jpg" width="50px" height="50px"></th>
     <td>Brand: Sony</td>
   </tr>
   <tr>
     <td>Display Type: LED</td>
   </tr>
   <tr>
-    <td>Screen size: 27 inches screen</td>
+    <td>Screen size: 27 inches screen</td></tr>
 </table>
-<button value="ADD TO CART" onclick="/cart.html">ADD TO CART</button>
-<select id="phonecount">
+<button value="ADD TO CART">ADD TO CART</button>
+<select id="tvcount">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
 </select>
-<div class="footer">
-  <p align="left">Posted by: GopiChand Murari<br>Contact information: <a href="gopimurari123@gmail.com">gopimurari123@gmail.com</a>.</p>
-</div>
+<center>
+<a href="cart.php"><input type="button" class="button" align="center" value="PROCEED TO CART">  </a>
+</center>
+</form>
 </body>
 
 </html>
