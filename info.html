@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+          <table>
+             <tr> 
+               <td colspan="2"> <center style="font-size:200%"> CUSTOMER INFO </center> </td>
+             </tr>
+			 <form action="secure.html">
+             <tr>
+			 
+                <td> FIRST NAME</td> 
+				<td> <input type="text" name="user name" placeholder="First Name" pattern="[a-z]{4,10}" title="Please Enter 4-10 letters only" required>  </td>
+              </tr>
+             <tr>
+			    <td> MIDDLE NAME </td>
+                <td> <input type="text" name="middle name" placeholder="Middle Name"/> </td>
+             </tr>
+			 <tr>
+			    <td> LAST NAME </td>
+                <td> <input type="text" name="last name" placeholder="Last Name" pattern="[a-z]{4,10}" title="Please Enter 4-10 letters only" required> </td>
+             </tr>				 
+              <tr>
+			 
+                <tr>
+                   <td> ADDRESS</td>
+                    <td>
+                         <textarea rows="2" columns="30" placeholder="Address"  required ></textarea>
+                     </td>
+                </tr>
+				 <tr>
+			    <td> CITY</td>
+                <td> <input type="text" name="city" placeholder="City" > </td>
+             </tr>	
+                <tr>
+                   <td> MOBILE NO </td>
+                    <td> <input type="text" maxlength="10" placeholder="Mobile Number" pattern="[1-9]{1}[0-9]{9}" title="Please enter valid phone number" required>
+                     </td>
+                </tr>
+                 <tr> 
+                     <td>EMAIL ID </td>
+                      <td> <input type="email" name="email" required pattern="^\S+@\S+\.\S+$" title="example@mail.com" placeholder="Email"/> </td>
+                 </tr>
+                  <tr>
+                      <td> Availability</td>
+					  <td>	
+					  <input type="checkbox" name="opt1" value="6 am-12 pm" >MORNING
+					  <input type="checkbox" name="opt2" value="12 PM-5 PM'"/>EVENING 
+					  <input type="checkbox" name="opt3" value="6PM-11PM"/>NIGHT
+                   	  </td>
+                  </tr>	
+  
+  <tr><td> How did you hear about us:</td>
+    <td><input type="text" name="hear" placeholder="?????"></td>
+	<tr><td>
+
+Enter Pincode:</td><td>
+ <input type="text" name="pw" placeholder="Pin Code" pattern="[a-z]{1}[0-9]{1}[a-z]{1}[0-9]{1}[a-z]{1}[0-9]{1}" title="Must contain only alphabetic characters in odd places and digits in even places and length of 6 characters only" required>
+<tr><td><button type="submit" class="button"> PROCEED FOR CHECKOUT </button> ​ 
+
+</table></form>
+  
+  </body>
+  </html>
+    </body>
+  </html>
