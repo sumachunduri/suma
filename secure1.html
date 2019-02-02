@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0095)file:///C:/Users/kchundur/AppData/Local/Temp/Temp1_Show_Hide_DIV_RadioButton.zip/JavaScript.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+<center style="font-size:200%"> SECURE PAYMENT </center>
+</head>
+<body>
+         
+             
+			 <img src="cards.jpg"  style="float:center;width:300px;height:100px;">
+			 <form action="home1.html">
+             
+			  
+  <script type="text/javascript">
+    function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var dvPassport = document.getElementById("dvPassport");
+        dvPassport.style.display = chkYes.checked ? "block" : "none";
+    }
+	 function ShowHideDiv1() {
+        var chkNo = document.getElementById("chkNo");
+        var dvPassport1 = document.getElementById("dvPassport1");
+        dvPassport1.style.display = chkNo.checked ? "block" : "none";
+    }
+</script>
+<span>Please Select Type Of Card</span>
+<label for="chkYes">
+    <input type="radio" id="chkYes" name="chkPassPort" onclick="ShowHideDiv()" required>
+    Debit
+</label>
+<label for="chkNo">
+    <input type="radio" id="chkNo" name="chkPassPort" onclick="ShowHideDiv1()" required>
+    Credit
+</label>
+<hr>
+<div id="dvPassport" style="display: none">
+    Card Number:
+    <input type="text" id="txtCardNumber" pattern="[4]{1}[0-9]{15}" title="The card number should start with 4  and should contain 16 digits only">
+</div>
+<div id="dvPassport1" style="display: none">
+    Card Number:
+    <input type="text" id="txtCardNumber1" pattern="[5]{1}[0-9]{15}" title="The card number should start with 5  and should contain 16 digits only">
+</div>
+    
+	   NAME:<br> 
+				 <input type="text" name="user name" placeholder="First Name" pattern="[a-z]{4,10}" title="Please Enter 4-10 letters only" required> <br> 
+           CVV:<br>
+  <input type="text" name="cvv"  maxlength="3" pattern="[1-9]{1}[0-9]{1}[0-9]{1}" title="must contain only 3 digits" required><br>
+
+<button type="submit" class="button"> Finish </button> ​
+</form>
+  
+  </body>
+  </html>
+ 
