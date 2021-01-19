@@ -1,0 +1,358 @@
+Delivered-To: kavyachunduri2711@gmail.com
+Received: by 2002:a9f:27c4:0:0:0:0:0 with SMTP id b62csp1893234uab;
+        Sun, 17 Jan 2021 03:19:25 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJz8YshQQBYGbKCBdVOLYxKVWkHET+ePwbEGyH3LwA0gHS0mcA1ETj1+fTh6C8XKFQAeTUT+
+X-Received: by 2002:a05:6638:b16:: with SMTP id a22mr16328066jab.56.1610882365046;
+        Sun, 17 Jan 2021 03:19:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610882365; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CNs2Ih6nzgBw/MbnN8+rQZg0tjCfclYSFudB40EUyFtwRlqx380KdYTlKtilyco+hI
+         AzUBg1Q8bM5Znnp6wGDtgj0aCxO1CmvmY0Z2iMHJ8xq5y+KL5mBpSSwaJT+tVgWFrPQw
+         DVxSVBTXNWe4iwPiUexfhZ27bWS/74dh38cyQ0AP/QSmV9wfWHJVNVbTINa8wkJ6UE35
+         Dajg5XnBJynViPstbI7Q3OYmgXi23JoJUSt95MztxSUdxAQ+yAb2Md6KNXba+VUSkYUW
+         PclNoXk/l9d9DAcx2G9sUGQcWa45KTKDQXEmEgpMvqtgzNhe3NesjvOMI5HdyjZTtHnR
+         4/ow==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:feedback-id:to:reply-to:message-id:subject:date:from
+         :dkim-signature:dkim-signature;
+        bh=y9UYvx5D0GHm9D8qVNz8Uv5THKw27+E1iNZdcgL06jM=;
+        b=YxQfl9B2+IVISp5UH607kMmw4xXhfXQpWhgugewkwGaVTmQFOQLuq5ZkJh05vK2QW4
+         yx7C0YWztbeKDSARz0H1uV++QRi44A+5Tfhm0CwYD4xOaYhIcq7H7svhKD8dHRjyV6Kg
+         jNoXpVp+ANz3KxZBB78Lqk7a6Ang+DZcfn6P2PxDVffP84Em+We48tY6r/s6wpowzcfY
+         3fEwxhmqkjPw4+mBdHXOREM9V3ZcvK4i0VIoPJy87Asqzr/e+ITpYWAj0C4y3FBgKEPs
+         FjU568c1wsuvxUdw8JCGDiOogWg4CbkZNRhOUhTKflzu4rCvhs/YXUEAHwdKZrm2sl2O
+         pewA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hackerrankforwork.com header.s=20150120130737.pm header.b=a0NW1D+E;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=QOKsrO4o;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.hackerrankforwork.com designates 104.245.209.217 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.hackerrankforwork.com;
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=hackerrankforwork.com
+Return-Path: <pm_bounces@pm-bounces.hackerrankforwork.com>
+Received: from mta217a-ord.mtasv.net (mta217a-ord.mtasv.net. [104.245.209.217])
+        by mx.google.com with ESMTPS id x13si3564595iop.25.2021.01.17.03.19.24
+        for <kavyachunduri2711@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 17 Jan 2021 03:19:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of pm_bounces@pm-bounces.hackerrankforwork.com designates 104.245.209.217 as permitted sender) client-ip=104.245.209.217;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hackerrankforwork.com header.s=20150120130737.pm header.b=a0NW1D+E;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=QOKsrO4o;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.hackerrankforwork.com designates 104.245.209.217 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.hackerrankforwork.com;
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=hackerrankforwork.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=20150120130737.pm; d=hackerrankforwork.com;
+ h=From:Date:Subject:Message-Id:Reply-To:To:Feedback-ID:MIME-Version:Content-Type; i=support@hackerrankforwork.com;
+ bh=pelFDbAcoFYG+/9f69U4iwRBNwA=;
+ b=a0NW1D+EO+MLE2lbkvVQazYN/zT3FgHabv8xOHvNui2ifziMlCD7DZCxtezxDFLkp1ncQQiB9UvY
+   iwOno7sYfUa2lzvB9KF0VX5rblzAuqaFBcXlKbUsP0sv0/Bh/2KZ+4QPcr43j7o/fMiDZwvm9p0D
+   4fwUpTSe48YTq/2APU0=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=pm; d=pm.mtasv.net;
+ h=From:Date:Subject:Message-Id:Reply-To:To:Feedback-ID:MIME-Version:Content-Type;
+ bh=pelFDbAcoFYG+/9f69U4iwRBNwA=;
+ b=QOKsrO4o+JVabiGluJus6PZTVsSKWj9SaSl4ndq6fg989DykmmSjRU1iJNXEuz5yhF6w+vvv06p2
+   CXc/kf6qHHBSLX1iE3adWVcWH+w/9f1oJA/faNXajnG8/RgMAhzQoxs5gwbKO6OEIAmx46EM9pBK
+   wDB2526vWX2G3j9howw=
+Received: by mta217a-ord.mtasv.net id h0gejo27tk4c for <kavyachunduri2711@gmail.com>; Sun, 17 Jan 2021 06:19:24 -0500 (envelope-from <pm_bounces@pm-bounces.hackerrankforwork.com>)
+X-PM-IP: 104.245.209.217
+X-IADB-IP: 104.245.209.217
+X-IADB-IP-REVERSE: 217.209.245.104
+From: HackerRank Team <support@hackerrankforwork.com>
+Date: Sun, 17 Jan 2021 06:19:24 -0500
+Subject: Thanks for taking the ReactJS Technical Test - DBS Virtual Hiring
+ Event, India
+Message-Id: <e7131bfe-3bb0-447d-b732-502f51fda3a0@mtasv.net>
+Reply-To: no-reply@hackerrank.com
+To: Kavya Chunduri <kavyachunduri2711@gmail.com>
+Feedback-ID: s538384-dGVzdC1jb25maXJtYXRpb24tZW1haWw=:s538384:a24280:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-PM-Message-Id: e7131bfe-3bb0-447d-b732-502f51fda3a0
+X-PM-Tag: test-confirmation-email
+X-PM-RCPT: |bTB8MjQyODB8NTM4Mzg0fGthdnlhY2h1bmR1cmkyNzExQGdtYWlsLmNvbQ==|
+X-PM-Message-Options: v1;9Hcc_PIAriBnYBOfaIwCcyIPcaJJ4QcTBG0Vjf0upsLgpqRZa9tU6RIlMq6j-Xrc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary=mk-16fb7f2ed6fc4d839e0528166d9087a2; charset=UTF-8
+
+--mk-16fb7f2ed6fc4d839e0528166d9087a2
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+ReactJS Technical Test - DBS Virtual Hiring Event, India - Submission =
+Confirmation
+
+
+Hello,
+
+Thanks for completing the test for=C2=A0**DBS ReactJS Virtual Hiring E=
+vent - India**. We've sent your submission to DBS.
+
+In the meantime, you can go ahead and solve more of such code challeng=
+es on [HackerRank](https://www.hackerrank.com/dashboard?h_r=3Dhrw&h_l=3D=
+confirmation_email&utm_source=3Dhrw&utm_campaign=3Dconfirmation_domain=
+s&utm_medium=3Demail). Solving code challenges is a great way to keep =
+your skills sharp for interviews. =20
+   =20
+Wish you all the best for your test result! =20
+   =20
+This is an automated message. Please **do not** reply to this. You'll =
+need to contact **DBS** directly for any follow-up questions.
+
+Thanks, =20
+HackerRank Team
+
+
+
+PS: HackerRank only provides a platform to conduct the challenges. It =
+does not schedule or evaluate
+any hiring challenges or conduct interviews for any company. Please di=
+rectly contact the company
+that sent you the invite for such purposes.
+
+--mk-16fb7f2ed6fc4d839e0528166d9087a2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width"/>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUT=
+F-8"/>
+  <title>Test Invite Email</title>
+</head>
+<body style=3D"-webkit-font-smoothing: antialiased; -webkit-text-size-=
+adjust: none; background: #f6f6f6 none; box-sizing: border-box; font-f=
+amily: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; fo=
+nt-size: 14px; height: 100%; line-height: 1.6; margin: 0; padding: 0; =
+width: 100% !important" bgcolor=3D"#f6f6f6">
+<style type=3D"text/css">
+  img {
+    max-width: 100%;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    width: 100% !important;
+    height: 100%;
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: #f6f6f6;
+  }
+
+  @media only screen and (max-width: 640px) {
+    h1 {
+      font-weight: 600 !important;
+      margin: 20px 0 5px !important;
+    }
+
+    h2 {
+      font-weight: 600 !important;
+      margin: 20px 0 5px !important;
+    }
+
+    h3 {
+      font-weight: 600 !important;
+      margin: 20px 0 5px !important;
+    }
+
+    h4 {
+      font-weight: 600 !important;
+      margin: 20px 0 5px !important;
+    }
+
+    h1 {
+      font-size: 22px !important;
+    }
+
+    h2 {
+      font-size: 18px !important;
+    }
+
+    h3 {
+      font-size: 16px !important;
+    }
+
+    .container {
+      width: 100% !important;
+    }
+
+    .content {
+      padding: 10px !important;
+    }
+
+    .content-wrap {
+      padding: 10px !important;
+    }
+
+    .invoice {
+      width: 100% !important;
+    }
+  }
+</style>
+<!-- <div style=3D"padding: 8px; background-color: #DDEEF6;"> -->
+<table class=3D"body-wrap" style=3D"background: #ffffff; box-sizing: b=
+order-box; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Aria=
+l, sans-serif; font-size: 14px; padding: 0; width: 100%" bgcolor=3D"#f=
+fffff">
+  <tr style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', =
+'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0;=
+ padding: 0">
+    <td style=3D"box-sizing: border-box; font-family: 'Helvetica Neue'=
+, 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; margin: =
+0; padding: 0; vertical-align: top" valign=3D"top"></td>
+    <td class=3D"container" style=3D"box-sizing: border-box; clear: bo=
+th !important; display: block !important; font-family: 'Helvetica Neue=
+', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; margin:=
+ 0 auto; padding: 0; vertical-align: top" valign=3D"top">
+      <div class=3D"content" style=3D"padding: 20px; box-sizing: borde=
+r-box; display: block; font-family: 'Helvetica Neue', 'Helvetica', Hel=
+vetica, Arial, sans-serif; font-size: 14px; margin: 0 auto;">
+        <table class=3D"main" width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-radius: 3px; box-sizing: border-box; font-f=
+amily: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; fo=
+nt-size: 14px; margin: 0 auto; padding: 0;">
+          <tr style=3D"box-sizing: border-box; font-family: 'Helvetica=
+ Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; ma=
+rgin: 0; padding: 0">
+            <td class=3D"content-wrap" style=3D"box-sizing: border-box=
+; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-s=
+erif; font-size: 14px; margin: 0; vertical-align: top" valign=3D"top">
+              <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', 'Hel=
+vetica', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0; pad=
+ding: 0">
+                <tr style=3D"box-sizing: border-box; font-family: 'Hel=
+vetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14=
+px; margin: 0; padding: 0">
+                  <td class=3D"content-block" style=3D"background: #39=
+424e; padding: 15px 20px 5px 20px; box-sizing: border-box; color: #fff=
+fff; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, san=
+s-serif; font-size: 14px; margin: 0; vertical-align: top" valign=3D"to=
+p" bgcolor=3D"#39424e">
+                    <div style=3D"padding: 8px; margin: 0px 0px 8px 0p=
+x;">
+                      <div style=3D"color: #fff;font-size: 26px; font-=
+weight: 700; line-height: 30px; max-width: 99%; overflow: hidden; text=
+-overflow: ellipsis;">
+                      <div style=3D"width: calc(100% - 100px); float:l=
+eft;">
+                        ReactJS Technical Test - DBS Virtual Hiring Ev=
+ent, India
+                      </div>=20
+                      </div>
+                      <div style=3D"color: #fff; font-size: 15px; font=
+-weight: 600">
+                        Submission Confirmation
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"padding: 20px; background: #fff; border-left-color: #e9e9e9=
+; border-left-style: solid; border-left-width: 1px; border-right-color=
+: #e9e9e9; border-right-style: solid; border-right-width: 1px; box-siz=
+ing: border-box; font-family: 'Helvetica Neue', 'Helvetica', Helvetica=
+, Arial, sans-serif; font-size: 14px; margin: 0;" bgcolor=3D"#fff">
+                <tr style=3D"box-sizing: border-box; font-family: 'Hel=
+vetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14=
+px; margin: 0; padding: 0">
+                  <td class=3D"content-block" style=3D"box-sizing: bor=
+der-box; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial,=
+ sans-serif; font-size: 14px; margin: 0; padding: 15px 0px 30px 0px; v=
+ertical-align: top;" valign=3D"top">
+                    <p>Hello,</p>
+
+<p>Thanks for completing the test for=C2=A0<strong>DBS ReactJS Virtual=
+ Hiring Event - India</strong>. We've sent your submission to DBS.</p>
+
+<p>In the meantime, you can go ahead and solve more of such code chall=
+enges on <a href=3D"https://click.pstmrk.it/2sm/www.hackerrank.com%2Fd=
+ashboard%3Fh_r%3Dhrw%26h_l%3Dconfirmation_email%26utm_source%3Dhrw%26u=
+tm_campaign%3Dconfirmation_domains%26utm_medium%3Demail/UYN2Sx8N/EDcI/=
+6RDM7esPEu/dGVzdC1jb25maXJtYXRpb24tZW1haWw">HackerRank</a>. Solving co=
+de challenges is a great way to keep your skills sharp for interviews.=
+<br>
+<br>
+Wish you all the best for your test result!<br>
+<br>
+This is an automated message. Please <strong>do not</strong> reply to =
+this. You'll need to contact <strong>DBS</strong> directly for any fol=
+low-up questions.</p>
+
+<p>Thanks,<br>
+HackerRank Team</p>
+
+                  </td>
+                </tr>
+              </table>
+
+              <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"background: #e4e4e4; border-bottom-left-radius: 5px; border=
+-bottom-right-radius: 5px; box-sizing: border-box; font-family: 'Helve=
+tica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px=
+; margin: 0; padding: 20px" bgcolor=3D"#e4e4e4">
+                <tr style=3D"box-sizing: border-box; font-family: 'Hel=
+vetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14=
+px; margin: 0; padding: 0">
+                <td>
+                  <div class=3D"faq" style=3D"float:left; padding-top:=
+20px;box-sizing: border-box; display: block; font-family: 'Avenir', 'S=
+egoe UI', 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif; fo=
+nt-size: 14px; margin: 0 auto; margin:20px; margin-top: 0px;margin-lef=
+t: 20px; padding-bottom: 0px !important;">
+                    <span style=3D"font-size: 20px; color: #39424e; fo=
+nt-weight:1000;"><b>HackerRank</b></span><span style=3D"color: #32c766=
+; font-size: 20px;">&#x25AE;</span><br />
+                    <span style=3D"color: #738f93; font-size: 12px;">7=
+00 E EI Camino Real, Mountain View, CA.</span><br />
+                    <span style=3D"color: #738f93; font-size: 12px;">C=
+opyright 2021 HackerRank. All rights reserved.</span>
+                  </div>
+                  </td>
+                  <td style=3D"vertical-align:bottom;">
+                    <div style=3D"float:right; text-align:right; paddi=
+ng-top:20px;box-sizing: border-box; display: block; font-family: 'Aven=
+ir', 'Segoe UI', 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-se=
+rif; font-size: 14px; margin: 0 auto; margin:20px; margin-top: 0px;mar=
+gin-left: 20px;">
+                      <span style=3D"color: #738f93; font-size: 12px;"=
+>For any technical queries, please refer to</span> <a href =3D "https:=
+//support.hackerrank.com/hc/en-us/sections/115001822568-FAQs" target=3D=
+"_blank" data-event-category=3D"Candidate Invitations Management" data=
+-event-action=3D"Click" data-event-label=3D"Link - FAQ" style=3D"color=
+: #097bbf; text-decoration: none; font-size: 12px;">FAQ</a> <span styl=
+e=3D"color: #738f93; font-size: 12px;">or <br /> email us at</span> <a=
+ href=3D"https://click.pstmrk.it/2sm/support.hackerrank.com%2Fhc%2Fen-=
+us%2Frequests%2Fnew%3Fticket_form_id%3D360001035834/UoN2Sx8N/EDcI/Pv1V=
+f5o4Xo/dGVzdC1jb25maXJtYXRpb24tZW1haWw" target=3D"_blank" data-event-c=
+ategory=3D"Candidate New Issue" data-event-action=3D"Click" data-event=
+-label=3D"New Candidate Ticket" style=3D"color: #097bbf; text-decorati=
+on: none; font-size: 12px;">support@hackerrank.com</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- </div> -->
+<img src=3D"https://ea.pstmrk.it/open/v3_q9k_8ZaDVEv_JzFRNiZSBJ0OlGgNc=
+9KplSyOUyVPDZGAAKTVkv_tAPTyj3vVVxHxLVzz0H_7s2LjWmkymQHoXLWEtfDEyTlkrJK=
+5WUGGDRVFBiM4HvN1kCmvZIptiBr_FUXGKUWmlbX815wguSxJ0vu0bzTdufGbiKk_4EPaD=
+_1Km7Pt_bvUB1LXR9K7Xp-1JvXCKP8MfV4Qkbh0K6RBwqTz2bSPefU-cpWja1J-QfycYgl=
+KYINn9z3cAxf2dltC9qYWZM-9Cl6xXHpqaZ9geqSkd-WJ-c4SndSZDEcRvkGNfGjx0jyba=
+fJYcWGRHPiimzLQuo-1TNOZDouN6Jpj3NVPujWzBy7G6GnAA4QxXqNGjatP9Q38lvJgsCC=
+dRQl6EkRCS4ZTY1Jjf3UuNcsXq5bbB9MUiIWtv56jo3CsSIx5v3LYsQf-HN9m5StLUN1vN=
+XQGSk1RvnqKYs5JihOXzAys5Bxithay4jP_PLaVH4VqgHunGbhRm_X4646lFIxs4O1-ET4=
+yuBDYtq2X1QG8zw" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /></bo=
+dy>
+</html>
+
+--mk-16fb7f2ed6fc4d839e0528166d9087a2--
